@@ -1,0 +1,42 @@
+<div class="area-page" style="margin-top: 60px">
+  <div class="window-page">
+    <div class="window" style="
+        display: flex;
+        justify-content: space-between;
+        align-items: start">
+
+
+      <div class="profile">
+        <div style="display: flex;justify-content: center;align-items: center;width: 100%">
+          <div class="image-profile" style="{{getProfilePhoto()}}">
+
+          </div>
+        </div>
+        <div class="name-surname">
+          {{user.name}} {{user.lastname}} {{user.secondname}}
+        </div>
+        <div class="email">
+          {{user.email}}
+        </div>
+      </div>
+
+      <div class="info">
+        <div class="header">
+          Опыт
+        </div>
+        <div class="body">
+
+          <div *ngFor="let exp of user.expiriences">
+
+            <div>{{exp.position}} {{exp.yearOfExpirience}} {{ exp.yearOfExpirience > 4 ? 'лет' : exp.yearOfExpirience > 1 ? 'года' : 'год' }}</div>
+
+            <div style="margin-top: 10px;font-size: 22px">{{exp.description}}</div>
+            <hr/>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

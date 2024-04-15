@@ -1,0 +1,20 @@
+<div class="top-panel">
+  <div style="display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+   max-width: 1360px;">
+
+    <app-logotype (click)="navigateIndex()" style="width: 17%;"></app-logotype>
+    <div class="main">
+
+      <div class="item" (click)="navigateToNews()">Новости</div>
+      <div class="item" (click)="navigateVacancy()">Вакансии</div>
+      <div class="item" (click)="navigateToSection()">Этапы отбора</div>
+      <div class="item" (click)="navigateIndex()">О компании</div>
+
+    </div>
+    <app-button-keep (click)="gotToReg()" style="width: 15%" text="Регистрация"></app-button-keep>
+    <app-button-accept (click)="gotToSingIn()" style="width:15%;margin-left: 20px" text="Войти"></app-button-accept>
+  </div>
+</div>

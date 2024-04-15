@@ -1,0 +1,58 @@
+.window {
+  cursor: default;
+  width: 600px;
+  min-height: 200px;
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid rgba(128, 128, 128, 0.27);
+  padding: 20px;
+  max-height: 700px;
+  overflow-y: scroll;
+}
+
+.header {
+  width: auto;
+  font-size: 24px;
+}
+
+.input-data {
+  width: 100%;
+  margin-top: 35px;
+}
+
+.input-data .text {
+  font-size: 16px;
+  color: grey;
+}
+
+.input-data .input {
+  margin-top: 5px;
+  width: calc(100% - 10px);
+  height: 40px;
+}
+
+.input_answer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input[type='text'], input[type='password'] {
+  width: calc(100% - 17px);
+  height: 100%;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid grey;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+label {
+  margin-left: 4px;
+  cursor: pointer;
+  font-size: 25px;
+}

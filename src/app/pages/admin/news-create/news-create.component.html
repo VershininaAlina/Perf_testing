@@ -1,0 +1,41 @@
+<div class="area-page" style="margin-top: 60px">
+  <div class="window-page">
+
+    <div class="header">
+      Создать Статью:
+    </div>
+    <form id="form">
+      <div class="input-data">
+        <div class="text">
+          Заголовок *
+        </div>
+        <div class="input" style="width: calc(100% - 2px)">
+          <input type="text" name="header">
+        </div>
+      </div>
+
+      <div class="input-data">
+        <div class="text">
+          Описание (без html) *
+        </div>
+        <div class="input" style="height: auto">
+          <textarea type="text" name="description"></textarea>
+        </div>
+      </div>
+
+
+      <div class="input-data">
+        <div class="text">
+          Статья (с html) *
+        </div>
+        <div class="input" style="height: auto">
+          <textarea type="text" name="body"></textarea>
+        </div>
+      </div>
+
+      <div style="margin-top: 20px; width: calc(100% + 0px)">
+        <app-button-accept (click)="submit()" text="Сохранить"></app-button-accept>
+      </div>
+    </form>
+  </div>
+</div>

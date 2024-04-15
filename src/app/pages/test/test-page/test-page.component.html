@@ -1,0 +1,51 @@
+<div class="area-page" style="margin-top: 60px">
+  <div class="window-page">
+    <div class="window" style="display: flex;
+justify-content: center;
+align-items: center;">
+      <div>
+        <form id="form">
+          <div class="header" style="display: flex;justify-content: center;width: 100%;text-align: center">
+            Вопрос: {{getQuestion()}}
+          </div>
+
+          <div class="answer" *ngIf="getTypeQuestion()=='TEXT'">
+            <div class="answer-items">
+
+
+              <ng-container *ngIf="getTypeAnswer()=='MANY'">
+                <div class="answer-item" *ngFor="let answer of getAnswerDtoList(); let i = index">
+                  <input type="checkbox" name="answersId" id="{{i}}" value="{{answer.id}}">
+                  <label for="{{i}}">{{answer.answer}}</label>
+                </div>
+              </ng-container>
+
+
+              <ng-container *ngIf="getTypeAnswer()=='ONE'">
+                <div class="answer-item" *ngFor="let answer of getAnswerDtoList(); let i = index">
+                  <input type="radio" name="answersId" id="{{i}}" value="{{answer.id}}">
+                  <label for="{{i}}">{{answer.answer}}</label>
+                </div>
+              </ng-container>
+            </div>
+
+          </div>
+          <div class="next">
+            <div class="button-next">
+              <app-button-accept text="Назад"
+                                 (click)="back()"></app-button-accept>
+
+            </div>
+            <div class="button-next" style="margin-left: 10px">
+
+              <app-button-accept *ngIf="index+1 != getQuestionSize()" text="Далее"
+                                 (click)="next()"></app-button-accept>
+              <app-button-accept *ngIf="index+1 == getQuestionSize()" text="Завершить  тест"
+                                 (click)="endTest()"></app-button-accept>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+<div class="area-page">
+  <div class="window-page">
+    <div class="window-page-block">
+      <div class="header-red">
+        Новости
+      </div>
+      <div class="window-header">
+        <div class="item">
+          Лучшие специалисты делятся своим опытом и интересными новостями IT-индустрии
+        </div>
+      </div>
+      <div class="window-header" style="margin-top: 50px">
+        <app-search-input style="width: 100%"></app-search-input>
+      </div>
+    </div>
+
+    <div style="margin-top: 20px" *ngIf="userLocalService.isHr()">
+      <app-button-keep (click)="userLocalService.navigateToAdminNewsCreate()" text="Создать статью"></app-button-keep>
+    </div>
+
+    <div class="container">
+      <div class="row" *ngFor="let item of news">
+        <div class="box" (click)="navigateToNew(item.id)">
+          <div class="header" style="font-size: 30px">{{item.header}}</div>
+
+          <br/>
+
+          <div [innerHTML]="item.description">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--
+    <div class="news-list">
+
+    </div>
+-->
+    <div style="margin-top: 10px">
+      <app-button-pages count="{{count}}" pageNumber="{{pageNumber+1}}" pageSize="30"></app-button-pages>
+    </div>
+  </div>
+</div>
+

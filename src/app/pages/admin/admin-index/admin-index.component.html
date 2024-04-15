@@ -1,0 +1,22 @@
+<div class="area-page">
+  <div class="window-page">
+    <div class="header" style="display: flex;justify-content: left;align-items: center">
+      <div>Открытые вакансии</div>
+      <div style="font-size: x-large;margin-left: 20px">
+        <app-button-keep (click)="navigateToVacancyCreate()" text="создать вакансию"></app-button-keep>
+      </div>
+    </div>
+    <div style="margin-top: 60px">
+      <ng-container *ngFor="let vacancy of vacancies">
+        <app-vacancy-admin-preview id="{{vacancy.id}}"
+                                   numberOfResponded="{{vacancy.numberOfResponded}}"
+                                   numberOfTestPassed="{{vacancy.numberOfPassedTests}}" name="{{vacancy.name}}"
+                                   description="{{vacancy.description}}"></app-vacancy-admin-preview>
+      </ng-container>
+    </div>
+    <div style="margin-top: 10px">
+      <app-button-pages url="admin" count="{{vacanciesCount}}" pageNumber="{{pageNumber+1}}" pageSize="30"></app-button-pages>
+
+    </div>
+  </div>
+</div>

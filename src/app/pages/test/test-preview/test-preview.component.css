@@ -1,0 +1,59 @@
+.window {
+  width: calc(100% - 40px);
+  min-height: 600px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.window .profile {
+  width: 200px;
+  height: 100%;
+  padding: 20px;
+  padding-left: 0px;
+  border-right: 1px solid rgba(0, 0, 0, 0.26);
+
+}
+
+.window .name-surname {
+  margin-top: 20px;
+  font-size: 22px;
+  width: 200px;
+  text-align: center;
+}
+
+.window .email {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.window .image-profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 400px;
+  border: 1px solid grey;
+  margin-top: 20px;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/3135/3135715.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.window .info {
+  width: calc(100% - 221px);
+  margin-left: 20px;
+}
+
+.window .not-found {
+  color: grey;
+  margin-top: 20px;
+}
+
+.body {
+  width: calc(100% - 20px);
+  margin-top: 20px;
+  font-size: 28px;
+
+  white-space: pre-line;
+}

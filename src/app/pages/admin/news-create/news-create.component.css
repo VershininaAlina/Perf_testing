@@ -1,0 +1,11 @@
+.input-data{
+  margin-top: 20px;
+}
+.input{
+  margin-top: 5px;
+
+}
+textarea{
+  width: calc(100% - 10px);
+  height: 200px;
+}

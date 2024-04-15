@@ -1,0 +1,4 @@
+<div class="pages">
+  <div class="button" *ngFor="let page of pageNumbers" (click)="goToPage(page)"
+       [ngClass]="{'active': Number(page) == Number(pageNumber), 'button-unactive': Number(page) != Number(pageNumber)}">{{ page }}</div>
+</div>

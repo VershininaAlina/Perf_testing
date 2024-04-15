@@ -1,0 +1,69 @@
+<div class="area-page" style="margin-top: 60px">
+  <div class="window-page">
+
+    <div class="header">
+      Создать вакансию:
+    </div>
+    <form id="form">
+      <div class="input-data">
+        <div class="text">
+          Имя *
+        </div>
+        <div class="input" style="width: calc(100% - 2px)">
+          <input type="text" name="name">
+        </div>
+      </div>
+
+      <div class="input-data">
+        <div class="text">
+          Описание *
+        </div>
+        <div class="input" style="height: auto">
+          <textarea type="text" name="description"></textarea>
+        </div>
+      </div>
+
+
+      <div class="input-data">
+        <div class="text">
+          Обязанности *
+        </div>
+        <div class="input" style="height: auto">
+          <textarea type="text" name="responsibilities"></textarea>
+        </div>
+      </div>
+
+      <div class="input-data">
+        <div class="text">
+          Требования *
+        </div>
+        <div class="input" style="height: auto">
+          <textarea type="text" name="requirements"></textarea>
+        </div>
+      </div>
+
+      <div class="input-data">
+        <div class="text">
+          Будет плюсом *
+        </div>
+        <div class="input" style="height: auto">
+          <textarea type="text" name="willPlus"></textarea>
+        </div>
+      </div>
+
+      <div class="input-data">
+        <div class="text">
+          Условия *
+        </div>
+        <div class="input" style="height: auto">
+          <textarea type="text" name="conditions"></textarea>
+        </div>
+      </div>
+    </form>
+    <div style="margin-top: 20px; width: calc(100% + 0px)">
+      <app-button-accept (click)="sumbit()" text="Сохранить"></app-button-accept>
+    </div>
+
+
+  </div>
+</div>

@@ -1,0 +1,116 @@
+<div class="area-page" style="margin-top: 60px">
+  <div class="window-page">
+
+    <form id="profile">
+
+      <div class="header">
+        Профиль:
+      </div>
+
+      <div style="display: flex;justify-content: center;align-items: center;width: 150px">
+        <div class="image-profile" [style]="getProfilePhoto()">
+
+        </div>
+
+      </div>
+      <div style="width: 150px;margin-top: 20px">
+        <app-button-accept text="Поменять" (click)="changePhotoProfile()"></app-button-accept>
+      </div>
+      <div class="input-data">
+        <div class="text">
+          Имя *
+        </div>
+        <div class="input">
+          <input type="text" name="name" value="{{user.name}}">
+        </div>
+      </div>
+
+      <div class="input-data">
+        <div class="text">
+          Фамилия *
+        </div>
+        <div class="input">
+          <input type="text" name="lastname" value="{{user.lastname}}">
+        </div>
+      </div>
+
+
+      <div class="input-data">
+        <div class="text">
+          Отчество *
+        </div>
+        <div class="input">
+          <input type="text" name="secondname" value="{{user.secondname}}">
+        </div>
+      </div>
+
+
+      <div class="input-data">
+        <div class="text">
+          Дата Рождения *
+        </div>
+        <div class="input">
+          <input type="date" name="birthDay" value="{{getDate()}}">
+        </div>
+      </div>
+
+      <div style="width: 150px;margin-top: 20px">
+        <app-button-accept (click)="submit()" text="Сохранить"></app-button-accept>
+      </div>
+    </form>
+
+    <div class="header" style="margin-top: 20px;">
+      Опыт:
+    </div>
+
+    <div>
+      <form *ngFor="let form of user.expiriences" id="form_{{form.id}}">
+
+        <div class="input-data">
+          <div class="text">
+            Позиция *
+          </div>
+          <div class="input">
+            <input type="text" name="position" value="{{form.position}}">
+          </div>
+        </div>
+
+        <div class="input-data">
+          <div class="text">
+            Кол-во полных лет работы *
+          </div>
+          <div class="input">
+            <input type="number" name="yearOfExperience" value="{{form.yearOfExpirience}}">
+          </div>
+        </div>
+
+        <div class="input-data">
+          <div class="text">
+            Описание *
+          </div>
+          <div class="input" style="height: 300px">
+            <textarea name="description">{{form.description}}</textarea>
+          </div>
+        </div>
+
+        <div style="width: 300px;margin-top: 40px;
+display: flex;
+justify-content: start;
+align-items: center">
+          <app-button-accept (click)="edit(form.id)" text="Сохранить"></app-button-accept>
+          <app-button-keep style="margin-left: 10px" text="Удалить"
+                           (click)="deleteExperience(form.id)"></app-button-keep>
+        </div>
+
+
+      </form>
+
+      <hr>
+      <app-button-accept-green (click)="addExperience()" text="Добавить"></app-button-accept-green>
+    </div>
+
+
+  </div>
+
+
+</div>

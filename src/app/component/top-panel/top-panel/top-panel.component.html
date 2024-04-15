@@ -1,0 +1,24 @@
+<div class="top-panel">
+  <div style="display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;max-width: 1360px;">
+
+    <app-logotype (click)="navigateIndex()" style="width: 17%;"></app-logotype>
+    <div class="main">
+      <div class="item" (click)="navigateToNews()">Новости</div>
+      <div class="item" (click)="navigateVacancy()">Вакансии</div>
+
+      <div class="item" *ngIf="userLocalService.isHr()" (click)="userLocalService.navigateToAdminVacancy()">Админка
+      </div>
+      <div style="max-width: 100px;min-width: 64px;" class="item" *ngIf="userLocalService.isHr()"
+           (click)="userLocalService.navigateToHr()">HR
+      </div>
+
+      <div class="item" (click)="navigateToSection()">Этапы отбора</div>
+      <div class="item" (click)="navigateIndex()">О компании</div>
+
+    </div>
+    <app-button-accept (click)="goToLk()" style="width:15%;margin-left: 20px" text="Личный кабинет"></app-button-accept>
+  </div>
+</div>

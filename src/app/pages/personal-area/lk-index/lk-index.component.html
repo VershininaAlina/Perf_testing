@@ -1,0 +1,51 @@
+<div class="area-page" style="margin-top: 60px">
+  <div class="window-page">
+    <div class="window" style="
+        display: flex;
+        justify-content: space-between;
+        align-items: start" *ngIf="user!=null">
+
+
+      <div class="profile">
+        <div style="display: flex;justify-content: center;align-items: center;width: 100%">
+          <div class="image-profile" style='{{getProfilePhoto()}}'>
+
+          </div>
+        </div>
+        <div class="name-surname">
+          {{user.name}} {{user.lastname}} {{user.secondname}}
+        </div>
+        <div class="email">
+          {{user.email}}
+        </div>
+        <div class="email">
+          #{{user.id}}
+        </div>
+        <div style="margin-top: 20px">
+          <app-button-accept text="Редактировать" (click)="navigateToEdit()"></app-button-accept>
+        </div>
+
+        <div style="margin-top: 10px">
+          <app-button-keep style="margin-top: 20px" (click)="exit()" text="Выход"></app-button-keep>
+        </div>
+      </div>
+
+      <div class="info">
+        <div class="header">
+          Профиль
+        </div>
+        <div style="width: calc(100% - 20px)">
+          <ng-container *ngFor="let vacancy of user.responds.vacancies">
+            <app-vacancy-preview-with-tests vacancy="{{JSON.stringify(vacancy)}}"
+                                            testPassed="{{JSON.stringify(testPassed)}}">
+            </app-vacancy-preview-with-tests>
+          </ng-container>
+        </div>
+        <div class="not-found" *ngIf="user.responds.vacancies.length==0">
+          Здесь пока ничего нет
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

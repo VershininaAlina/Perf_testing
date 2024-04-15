@@ -1,0 +1,39 @@
+.window {
+  cursor: default;
+  width: 600px;
+  min-height: 200px;
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid rgba(128, 128, 128, 0.27);
+  padding: 20px;
+}
+
+.header {
+  width: auto;
+  font-size: 24px;
+}
+
+.twice {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.input-data {
+  width: calc(50% - 10px);
+  margin-top: 15px;
+}
+
+.input-data .text {
+  font-size: 16px;
+  color: grey;
+}
+
+.input-data .input {
+  margin-top: 5px;
+  width: calc(100% - 10px);
+  height: 40px;
+}
+

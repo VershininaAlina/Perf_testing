@@ -1,0 +1,20 @@
+
+.logotype {
+  width: 100%;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logotype:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.logotype img {
+  padding-left: 0px;
+  padding-right: 0px;
+  width: 100%;
+  height: 100%;
+}

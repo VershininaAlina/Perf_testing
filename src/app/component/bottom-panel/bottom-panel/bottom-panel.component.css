@@ -1,0 +1,36 @@
+.bottom-panel {
+  width: 90%;
+  padding: 20px 5%;
+  min-height: 180px;
+  border-radius: 50px 50px 0px 0px;
+  background-color: #1C1E3E;
+}
+
+.logotype-description {
+  margin-top: 40px;
+  width: 200px;
+  color: grey;
+  font-size: 12px;
+}
+
+.block {
+  width: auto;
+  height: 90px;
+  border-radius: 20px;
+  border: 1px solid rgba(128, 128, 128, 0.59);
+  color: rgba(128, 128, 128, 0.59);
+  padding: 15px;
+  max-width: 200px;
+
+}
+
+.phoneNumber {
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.phoneNumber:hover {
+  text-decoration: underline;
+}

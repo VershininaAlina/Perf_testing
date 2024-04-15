@@ -1,0 +1,45 @@
+<div class="area" (click)="onClick($event)">
+  <div class="window">
+
+    <form id="form">
+
+      <div class="input-data">
+        <div class="text">
+          Должность *
+        </div>
+        <div class="input">
+          <input type="text" name="position">
+        </div>
+      </div>
+
+      <div class="input-data">
+        <div class="text">
+          Стаж работы *
+        </div>
+        <div class="input">
+          <input type="number" name="yearOfExperience">
+        </div>
+      </div>
+
+      <div class="input-data">
+        <div class="text">
+          Описание *
+        </div>
+        <div class="input" style="height: 300px">
+          <textarea name="description"></textarea>
+        </div>
+      </div>
+
+      <div style="width: 300px;margin-top: 40px;
+display: flex;
+justify-content: start;
+align-items: center">
+        <app-button-accept text="Сохранить" (click)="submit()"></app-button-accept>
+        <app-button-keep style="margin-left: 10px" text="Закрыть"
+                         (click)="onClick()"></app-button-keep>
+      </div>
+
+
+    </form>
+  </div>
+</div>

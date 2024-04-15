@@ -1,0 +1,84 @@
+<div class="area" (click)="onClick($event)">
+  <div class="window">
+    <div class="header">
+      Регистрация
+    </div>
+    <form id="form">
+
+      <div class="twice">
+        <div class="input-data">
+          <div class="text">
+            Имя *
+          </div>
+          <div class="input">
+            <input type="text" name="name">
+          </div>
+        </div>
+
+        <div class="input-data">
+          <div class="text">
+            Фамилия *
+          </div>
+          <div class="input">
+            <input type="text" name="lastname">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="twice">
+        <div class="input-data">
+          <div class="text">
+            Отчество *
+          </div>
+          <div class="input">
+            <input type="text" name="secondname">
+          </div>
+        </div>
+
+        <div class="input-data">
+          <div class="text">
+            Дата Рождения *
+          </div>
+          <div class="input">
+            <input type="date" name="birthDay">
+          </div>
+        </div>
+      </div>
+
+      <div class="twice">
+        <div class="input-data">
+          <div class="text">
+            Почта *
+          </div>
+          <div class="input">
+            <input type="text" name="email">
+          </div>
+        </div>
+
+        <div class="input-data">
+          <div class="text">
+            Пароль *
+          </div>
+          <div class="input">
+            <input type="password" name="password">
+          </div>
+        </div>
+      </div>
+
+      <div class="input-data" style="width: 100%;margin-top: 20px">
+        <input type="checkbox" name="accept" id="accept">
+        <label for="accept">
+          вы соглашаетесь принять условия Политики конфиденциальности, Пользовательского соглашения и Политики защиты и
+          обработки персональных данных.
+        </label>
+      </div>
+      <div class="input-data" style="width: 100%;display: flex;justify-content: end;">
+        <div class="input-data" style="width: 150px;margin-top: 5px;margin-right: 4px">
+          <app-button-accept (click)="submit()" text="Регистрация"></app-button-accept>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</div>

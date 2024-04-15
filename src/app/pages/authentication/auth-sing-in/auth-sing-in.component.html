@@ -1,0 +1,32 @@
+<div class="area" (click)="onClick($event)">
+  <div class="window">
+    <div class="header">
+      Авторизация
+    </div>
+    <form id="form">
+      <div class="input-data">
+        <div class="text">
+          Почта *
+        </div>
+        <div class="input">
+          <input type="text" name="email">
+        </div>
+      </div>
+
+      <div class="input-data" style="margin-top: 20px ">
+        <div class="text">
+          Пароль *
+        </div>
+        <div class="input">
+          <input type="password" name="password">
+        </div>
+      </div>
+
+      <div class="input-data" style="display: flex;justify-content: end;">
+        <div class="input-data" style="width: 150px;margin-top: 5px;margin-right: 4px">
+          <app-button-accept (click)="submit()" text="Войти"></app-button-accept>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

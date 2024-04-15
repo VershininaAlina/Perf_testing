@@ -1,0 +1,95 @@
+<div class="area" (click)="onClick($event)">
+  <div class="window">
+    <div class="header">
+      Создать вопрос
+    </div>
+    <form id="form">
+      <div class="input-data">
+        <div class="text">
+          Вопрос *
+        </div>
+        <div class="input">
+          <input type="text" name="question">
+        </div>
+      </div>
+
+      <div class="input-data">
+        <div class="text">
+          Тип вопроса *
+        </div>
+        <div class="input">
+          <div>
+            <input type="radio" id="voice" name="questionType" value="VOICE" (click)="getQuestionType()">
+            <label for="voice">Голосовой</label>
+          </div>
+          <div style="margin-top: 5px">
+            <input type="radio" id="text" name="questionType" checked value="TEXT" (click)="getQuestionType()">
+            <label for="text">Текстовый</label>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="input-data" style="margin-top: 30px">
+        <div class="text">
+          Тип ответа *
+        </div>
+        <div class="input">
+          <div>
+            <input type="radio" id="many" name="answerType" value="MANY" (click)="getAnswerType()">
+            <label for="many">Множество ответов</label>
+          </div>
+          <div style="margin-top: 5px">
+            <input type="radio" id="one" name="answerType" checked value="ONE" (click)="getAnswerType()">
+            <label for="one">Один ответ</label>
+          </div>
+
+        </div>
+      </div>
+
+      <div style="top: 20px"></div>
+
+      <div class="input-data" *ngFor="let answer of answers; let i = index">
+        <div class="text">
+          Ответ *
+        </div>
+
+
+        <div class="input input_answer" style="margin-top: 10px">
+
+          <div style="width: 64px">
+            <div (click)="deleteAnswer(answer.id)"
+                 style="display: flex;justify-content: center;align-items: center;width: 54px;height: 54px;background-color: #FF5959;color: white;border-radius: 20px;cursor: pointer">
+              X
+            </div>
+          </div>
+
+          <div style="width: calc(100% - 90px)">
+            <input type="text" name="answer">
+          </div>
+
+          <div style="margin-left: 10px;" *ngIf="getAnswerType() == 'ONE'">
+            <input type="radio" value="{{i}}" name="answerTrue">
+
+          </div>
+
+          <div style="margin-left: 10px;" *ngIf="getAnswerType() == 'MANY'">
+            <input type="checkbox" value="{{i}}" name="answerTrue">
+          </div>
+        </div>
+      </div>
+
+      <div class="input-data" style="display: flex;justify-content: end;align-items: center">
+        <div *ngIf="getQuestionType() == 'TEXT'" style="width: 200px;margin-right: 4px">
+          <app-button-keep text="Добавить ответ" (click)="addAnswer()"></app-button-keep>
+        </div>
+
+        <div style="width: 150px;margin-right: 4px">
+          <app-button-accept text="Создать" (click)="submit()"></app-button-accept>
+        </div>
+
+      </div>
+    </form>
+  </div>
+</div>

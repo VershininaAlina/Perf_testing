@@ -1,0 +1,20 @@
+.window {
+  width: calc(100% - 100px);
+  min-height: 500px;
+  border-radius: 15px;
+  background-color: #F5F5FA;
+  padding: 30px 50px;
+}
+
+.preheader {
+  font-size: 34px;
+  margin-top: 40px  ;
+}
+
+li {
+  font-size: 20px;
+  margin-top: 5px;
+  font-weight: 300;
+}
+
+

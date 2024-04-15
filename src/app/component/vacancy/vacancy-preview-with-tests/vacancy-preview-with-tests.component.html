@@ -1,0 +1,22 @@
+<div class="window-preview" *ngIf="vacancyObject!=null && testPassedArray!=null">
+  <div style="width: calc(100% - 225px);border-right: 1px solid grey">
+    <div class="header-page">
+      {{vacancyObject.name}}
+    </div>
+    <div class="description">
+      {{vacancyObject.description}}
+    </div>
+    <div class="header" style="margin-top: 20px; font-size: 22px;">Тесты:</div>
+
+    <div style="margin-top: 10px;width: 350px;" *ngFor="let test of vacancyObject.testDtos">
+      <app-button-accept-green *ngIf="testNotPassed(test)" (click)="navigateToTest(test.id,vacancyObject.id)"
+                               text="{{test.name}}"></app-button-accept-green>
+    </div>
+
+
+    <div class="all-pass" *ngIf="countTestWithoutPassed()==0 || vacancyObject.testDtos.length==0">Все тесты пройдены</div>
+  </div>
+  <div>
+    <app-button-accept-big (click)="navigateToVacancy()" text="Подробнее о вакансии"></app-button-accept-big>
+  </div>
+</div>

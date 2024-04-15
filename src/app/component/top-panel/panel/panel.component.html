@@ -1,0 +1,6 @@
+<ng-container *ngIf="isAuth()">
+  <app-top-panel></app-top-panel>
+</ng-container>
+<ng-container *ngIf="!isAuth()">
+  <app-top-panel-no-auth></app-top-panel-no-auth>
+</ng-container>

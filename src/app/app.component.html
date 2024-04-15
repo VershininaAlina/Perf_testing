@@ -1,0 +1,8 @@
+<div class="message" *ngIf="isMobileDevice">
+  Please enter through computer!
+</div>
+<div *ngIf="!isMobileDevice">
+  <router-outlet></router-outlet>
+</div>
+
+

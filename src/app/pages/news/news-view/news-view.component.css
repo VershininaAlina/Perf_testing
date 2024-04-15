@@ -1,0 +1,48 @@
+.window-page-block {
+  padding: 40px;
+  padding-top: 20px;
+  width: calc(100% - 80px);
+  height: 280px;
+  background-color: #FFEFB5;
+
+  border-radius: 40px;
+}
+
+.window-page-description {
+  margin-top: 20px;
+  padding: 20px 40px;
+
+  width: calc(100% - 80px);
+  height: fit-content;
+  background-color: #F5F5FA;
+  border-radius: 40px;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.window-page-block .head {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+
+}
+
+.date {
+  min-width: 140px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.time-to-read {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin-top: 40px;
+  border-radius: 50px;
+  padding: 12px 20px;
+  background-color: #1C1E3E;
+}
+

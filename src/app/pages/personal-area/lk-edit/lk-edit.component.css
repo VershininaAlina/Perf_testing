@@ -1,0 +1,53 @@
+.header {
+  width: auto;
+  font-size: 24px;
+}
+
+.input-data {
+  width: 100%;
+  margin-top: 25px;
+}
+
+.input-data .text {
+  font-size: 16px;
+  color: grey;
+}
+
+.input-data .input {
+  margin-top: 5px;
+  width: calc(100% - 10px);
+  height: 40px;
+}
+
+input[type='text'], input[type='password'], input[type='date'], input[type='number'] {
+  padding-left: 10px;
+  font-size: 20px;
+  width: calc(100% - 10px);
+  height: 100%;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid grey;
+}
+
+textarea {
+  width: calc(100% - 20px);
+  height: 300px;
+  border-radius: 8px;
+  outline: none;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.21);
+}
+
+
+
+ .image-profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 400px;
+  border: 1px solid grey;
+  margin-top: 20px;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/3135/3135715.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

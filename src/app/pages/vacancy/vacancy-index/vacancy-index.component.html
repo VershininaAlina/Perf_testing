@@ -1,0 +1,20 @@
+<div class="area-page">
+  <div class="window-page">
+    <div class="header" style="display: flex;justify-content: left;align-items: center">
+      <div>Открытые вакансии</div>
+      <div style="font-size: x-large;margin-left: 20px" *ngIf="userLocalService.isHr()">
+        <app-button-keep (click)="userLocalService.navigateToVacancyCreate()" text="создать вакансию"></app-button-keep>
+      </div>
+    </div>
+    <div style="margin-top: 60px">
+      <ng-container *ngFor="let vacancy of vacancies">
+        <app-vacancy-preview id="{{vacancy.id}}" name="{{vacancy.name}}"
+                             description="{{vacancy.description}}"></app-vacancy-preview>
+      </ng-container>
+    </div>
+    <div style="margin-top: 10px">
+      <app-button-pages url="vacancies" count="{{vacanciesCount}}" pageNumber="{{pageNumber+1}}"
+                        pageSize="30"></app-button-pages>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,148 @@
+.island {
+  width: 400px;
+  cursor: pointer;
+}
+
+.island img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.white {
+  color: white;
+}
+
+.text {
+  margin-top: 20px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+.text:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.window-ill {
+  margin-top: 20px;
+}
+
+
+.arrow-container {
+  display: block;
+  width: 100px;
+  height: 100px;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateZ(0deg);
+}
+
+.arrow-container:hover {
+  cursor: pointer;
+}
+
+.arrow-container:hover .arrow {
+  top: 50%;
+}
+
+.arrow-container:hover .arrow:before {
+  transform: translate(-50%, -50%) rotateZ(-30deg);
+}
+
+.arrow-container:hover .arrow:after {
+  transform: translate(-50%, -50%) rotateZ(30deg);
+}
+
+.arrow {
+  position: absolute;
+  left: 50%;
+  transition: all 0.4s ease;
+}
+
+.arrow:before,
+.arrow:after {
+  content: '';
+  display: block;
+  position: absolute;
+  transform-origin: bottom right;
+  background: #fff;
+  width: 4px;
+  height: 50px;
+  border-radius: 10px;
+  transform: translate(-50%, -50%) rotateZ(-45deg);
+  transition: all 0.4s ease;
+}
+
+.arrow:after {
+  transform-origin: bottom left;
+  transform: translate(-50%, -50%) rotateZ(45deg);
+}
+
+.arrow:nth-child(1) {
+  opacity: 0.3;
+  top: 15%;
+}
+
+.arrow:nth-child(2) {
+  opacity: 0.6;
+  top: 35%;
+}
+
+.arrow:nth-child(3) {
+  opacity: 0.9;
+  top: 55%;
+}
+
+.text-block {
+  cursor: pointer;
+  max-width: 650px;
+  font-size: 28px;
+  margin-left: 20px;
+}
+
+.island:hover {
+  animation-duration: 0.2s;
+  animation: scale 0.3s forwards;
+}
+
+.island:not(:hover) {
+  animation-duration: 0.3s;
+  animation: unscale 0.3s forwards;
+}
+
+
+.text-block:hover {
+
+  animation-duration: 1s;
+  animation: scale 1s forwards;
+}
+
+.text-block:not(:hover) {
+  animation-duration: 1s;
+  animation: unscale 1s forwards;
+}
+
+@keyframes scale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes unscale {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+

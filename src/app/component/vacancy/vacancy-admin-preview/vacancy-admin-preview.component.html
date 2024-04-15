@@ -1,0 +1,16 @@
+<div class="window-preview">
+  <div style="width: calc(100% - 225px);">
+    <div class="header-page">
+      {{name}}
+    </div>
+    <div class="description">{{description}}
+    </div>
+    <div class="description">
+      {{numberOfResponded}}/{{numberOfTestPassed}} Кол-во откликов/Кол-в пройденных тестов
+    </div>
+
+  </div>
+  <div>
+    <app-button-accept-big (click)="navigateToVacancy()" text="Подробнее о вакансии"></app-button-accept-big>
+  </div>
+</div>

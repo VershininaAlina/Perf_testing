@@ -1,0 +1,67 @@
+.window {
+  cursor: default;
+  width: 600px;
+
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid rgba(128, 128, 128, 0.27);
+  padding: 20px;
+}
+
+.header {
+  width: auto;
+  font-size: 24px;
+}
+
+.input-data {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.input-data .text {
+  font-size: 16px;
+  color: grey;
+}
+
+.input-data .input {
+  margin-top: 5px;
+  width: calc(100% - 10px);
+  height: 40px;
+}
+
+input[type='text'], input[type='password'] {
+  width: calc(100% - 17px);
+  height: 100%;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid grey;
+}
+
+.form-group {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+.custom-file-input {
+  display: none;
+}
+
+.custom-file-label {
+  cursor: pointer;
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+}
+
+.custom-file-button {
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  padding: 4px 12px;
+  outline: none;
+  white-space: nowrap;
+}
+
+.custom-file-button:hover {
+  background-color: #0056b3;
+}

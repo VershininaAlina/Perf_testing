@@ -1,0 +1,30 @@
+<div class="area-page">
+  <div class="window-page">
+    <div class="window-page-block">
+
+      <div class="head">
+        <div class="date">{{getDate()}}</div>
+        <div *ngIf="userLocalService.isHr()">
+          <app-button-accept (click)="userLocalService.deleteNews(news.id)" text="Удалить"></app-button-accept>
+        </div>
+      </div>
+      <div class="header" style="margin-top: 30px">
+        {{news.header}}
+      </div>
+      <div class="time-to-read">
+        Время прочтения: {{getTime()}}.
+
+      </div>
+    </div>
+    <div class="window-page-description">
+      <div [innerHTML]="getDescription()">
+
+      </div>
+    </div>
+
+    <div class="body" [innerHTML]="getBody()">
+    </div>
+
+  </div>
+</div>
+<div style="margin-top: 40px"></div>

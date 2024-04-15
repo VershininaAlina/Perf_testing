@@ -1,0 +1,60 @@
+<script src="test-create.component.ts"></script>
+<div class="area-page" style="margin-top: 60px">
+  <div class="window-page">
+
+    <div class="header">
+      Создать тест:
+    </div>
+    <form id="form">
+      <div class="input-data">
+        <div class="text">
+          Название *
+        </div>
+        <div class="input" style="width: calc(100% - 2px)">
+          <input type="text" name="name">
+        </div>
+      </div>
+
+      <div class="input-data">
+        <div class="text">
+          Описание *
+        </div>
+        <div class="input" style="height: auto">
+          <textarea type="text" name="description"></textarea>
+        </div>
+      </div>
+    </form>
+
+    <div class="input-data" *ngFor="let question of questions; let qi = index">
+      <div class="header">
+        {{question.question}}
+      </div>
+      <div style="margin-top: 10px" *ngIf="question.questionType == 'TEXT'">
+        <ng-container *ngFor="let option of question.options;let ai = index">
+          <div *ngIf="question.answerType == 'ONE'">
+            <input type="radio" id="{{ai}}" name="{{qi}}" [checked]="question.answer.indexOf(option) != null && question.answer.indexOf(option) != -1">
+            <label for="{{ai}}">{{option.answer}}</label>
+          </div>
+
+          <div *ngIf="question.answerType == 'MANY'">
+            <input type="checkbox" id="{{ai}}" name="{{qi}}" [checked]="question.answer.indexOf(option) != null && question.answer.indexOf(option) != -1">
+            <label for="{{ai}}">{{option.answer}}</label>
+          </div>
+
+        </ng-container>
+      </div>
+      <hr/>
+      <app-button-keep text="Удалить" (click)="deleteQuestion(question)"></app-button-keep>
+    </div>
+
+    <div class="input-data" style="display: flex;justify-content: end;align-items: center;">
+      <app-button-accept text="Добавить вопрос" (click)="addAnswer()"></app-button-accept>
+    </div>
+
+
+    <div style="margin-top: 20px; width: calc(100% + 0px)">
+      <app-button-accept text="Сохранить" (click)="submit()"></app-button-accept>
+    </div>
+
+  </div>
+</div>

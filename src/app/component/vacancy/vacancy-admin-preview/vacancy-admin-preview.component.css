@@ -1,0 +1,35 @@
+
+.header-page {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.header-page:hover {
+  text-decoration: underline;
+
+}
+
+.window-preview {
+  margin-top: 10px;
+  padding: 30px;
+  width: calc(100% - 60px);
+  border-radius: 20px;
+
+  background-color: #F5F5FA;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.description {
+  margin-top: 30px;
+
+  width: calc(100% - 100px);
+  font-size: 16px;
+  font-weight: 300;
+  white-space: nowrap; /* Текст не переносится */
+  overflow: hidden; /* Обрезаем всё за пределами блока */
+  text-overflow: ellipsis; /* Добавляем многоточие */
+
+}

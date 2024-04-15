@@ -1,0 +1,43 @@
+<div class="area-page">
+  <div class="window-page">
+    <div class="header" style="display: flex;justify-content: left;align-items: center">
+      <div>HR</div>
+      <div style="font-size: x-large;margin-left: 20px">
+        <app-button-keep (click)="createHr()" text="Создать hr'a"></app-button-keep>
+      </div>
+
+      <div style="font-size: x-large;margin-left: 20px">
+        <app-button-keep (click)="setHr()" text="Назначить hr'a"></app-button-keep>
+      </div>
+    </div>
+    <div style="margin-top: 60px">
+      <ng-container *ngFor="let hr of users">
+        <div class="user">
+          <div>
+            {{hr.email}}
+          </div>
+          <div>
+            {{hr.name}}
+          </div>
+          <div>
+            {{hr.lastname}}
+          </div>
+
+          <div>
+            {{hr.secondname}}
+          </div>
+          <div>
+            {{hr.role}}
+          </div>
+          <div>
+            <app-button-accept (click)="setRole(hr.id)" text="Понизить"></app-button-accept>
+          </div>
+          <div>
+            <app-button-accept (click)="deleteUser(hr.id)" text="Удалить"></app-button-accept>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+
+  </div>
+</div>
